@@ -13,7 +13,7 @@ Se identifican tres componentes principales:
 * Base de Datos (Almacenamiento): Un esquema relacional en SQL (`schema.sql`) para la persistencia de datos (actualmente simulada en memoria en el modelo).
 
 3. ¿Qué mejoras arquitectónicas propondrías para hacerlo más mantenible?
-Para escalar este sistema de manera profesional, propongo las siguientes mejoras[cite: 17]:
+Para escalar este sistema de manera profesional, propongo las siguientes mejoras:
 * Implementar Arquitectura por Capas Estricta: Separar definitivamente las Rutas (endpoints), Controladores (lógica HTTP), Servicios (reglas de negocio) y Repositorios (acceso a la base de datos).
 * Centralizar la Configuración: Usar variables de entorno (archivo `.env`) para manejar puertos y cadenas de conexión a la base de datos.
 * Manejo de Errores Global: Crear un middleware en Express para capturar y formatear los errores, evitando que el servidor se caiga y devolviendo respuestas HTTP consistentes.
